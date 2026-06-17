@@ -8,9 +8,9 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#222] mt-auto">
+    <footer className="bg-[#131313] border-t border-border mt-auto">
       <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-[#a0a0a0]">
+        <p className="text-sm text-white/70">
           &copy; {new Date().getFullYear()} Sandjar Kozubaev
         </p>
         <div className="flex items-center gap-6">
@@ -20,7 +20,7 @@ export default function Footer() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[#a0a0a0] hover:text-white transition-colors"
+              className="text-sm text-white/70 hover:text-white transition-colors"
             >
               {link.label}
             </Link>
