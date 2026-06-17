@@ -11,18 +11,18 @@ export default function BioPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-8">Bio</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Bio</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="md:col-span-1">
-              <div className="aspect-square bg-[#111] rounded-lg overflow-hidden border border-[#222]">
+              <div className="aspect-square bg-card rounded-lg overflow-hidden border border-border">
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1a1a2e] to-[#16213e]">
                   <span className="text-6xl opacity-20 font-bold">SK</span>
                 </div>
               </div>
             </div>
             <div className="md:col-span-2">
-              <div className="space-y-4 text-[#a0a0a0] leading-relaxed">
+              <div className="space-y-4 text-muted leading-relaxed">
                 <p>
                   Sandjar Kozubaev is a designer, researcher, and educator working at the
                   intersection of design, futures thinking, and digital media. Their work
@@ -53,7 +53,7 @@ export default function BioPage() {
 
           {/* Research Interests */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6">Research Interests</h2>
+            <h2 className="text-2xl font-semibold mb-6 font-heading">Research Interests</h2>
             <div className="flex flex-wrap gap-3">
               {[
                 "Design Research",
@@ -67,7 +67,7 @@ export default function BioPage() {
               ].map((interest) => (
                 <span
                   key={interest}
-                  className="px-4 py-2 text-sm rounded-full border border-[#222] text-[#a0a0a0]"
+                  className="px-4 py-2 text-sm rounded-full border border-border text-muted"
                 >
                   {interest}
                 </span>

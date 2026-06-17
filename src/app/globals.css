@@ -6,6 +6,7 @@
   --accent: #4975ef;
   --muted: #a0a0a0;
   --border: #222222;
+  --card-bg: #111111;
 }
 
 @theme inline {
@@ -14,14 +15,38 @@
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
-  --font-sans: "Inconsolata", monospace;
-  --font-heading: "Playfair Display", serif;
+  --color-card: var(--card-bg);
+  --font-sans: "Inconsolata", "Courier New", monospace;
+  --font-heading: "Playfair Display", "Georgia", serif;
+  --font-display: "Abril Fatface", "Georgia", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inconsolata", monospace;
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* Headings use Playfair Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* Display headings (like section titles) use Abril Fatface */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+/* Monospace elements use Inconsolata */
+.font-mono, code, pre, .font-mono-text {
+  font-family: var(--font-sans);
 }
 
 /* Smooth scrolling */

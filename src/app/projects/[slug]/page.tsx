@@ -13,8 +13,8 @@ export default function ProjectDetailPage() {
     return (
       <div className="min-h-screen pt-24 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Project Not Found</h1>
-          <Link href="/projects" className="text-[#4975ef] hover:text-white transition-colors">
+          <h1 className="text-2xl font-bold mb-4 font-heading">Project Not Found</h1>
+          <Link href="/projects" className="text-accent hover:text-white transition-colors">
             ← Back to Projects
           </Link>
         </div>
@@ -32,12 +32,12 @@ export default function ProjectDetailPage() {
         >
           <Link
             href="/projects"
-            className="text-sm text-[#4975ef] hover:text-white transition-colors mb-8 inline-block"
+            className="text-sm text-accent hover:text-white transition-colors mb-8 inline-block"
           >
             ← Back to Projects
           </Link>
 
-          <div className="aspect-[16/9] bg-[#111] rounded-lg overflow-hidden mb-8 border border-[#222]">
+          <div className="aspect-[16/9] bg-card rounded-lg overflow-hidden mb-8 border border-border">
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1a1a2e] to-[#16213e]">
               <span className="text-8xl opacity-10 font-bold">
                 {project.title.charAt(0)}
@@ -47,13 +47,13 @@ export default function ProjectDetailPage() {
 
           <div className="flex items-start justify-between gap-4 mb-6">
             <div>
-              <h1 className="text-3xl md:text-5xl font-bold mb-2">{project.title}</h1>
-              <p className="text-[#a0a0a0]">{project.category}</p>
+              <h1 className="text-3xl md:text-5xl font-bold mb-2 font-heading">{project.title}</h1>
+              <p className="text-muted">{project.category}</p>
             </div>
-            <span className="text-lg text-[#4975ef] whitespace-nowrap">{project.year}</span>
+            <span className="text-lg text-accent whitespace-nowrap">{project.year}</span>
           </div>
 
-          <p className="text-lg text-[#a0a0a0] leading-relaxed mb-8">
+          <p className="text-lg text-muted leading-relaxed mb-8">
             {project.fullDescription}
           </p>
 
@@ -62,7 +62,7 @@ export default function ProjectDetailPage() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#4975ef] text-white rounded-lg hover:bg-[#3a5fc7] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-lg hover:bg-[#3a5fc7] transition-colors"
             >
               View Project →
             </a>
