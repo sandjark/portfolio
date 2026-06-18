@@ -33,13 +33,23 @@ src/
 ```
 
 ## Design System
-- **Background**: `#0a0a0a` (dark)
-- **Foreground**: `#ededed` (light text)
+- **Background**: `#ffffff` (white)
+- **Foreground**: `#686868` (medium gray body text)
+- **Heading**: `#000000` (black headings)
 - **Accent**: `#4975ef` (blue links/buttons)
-- **Muted**: `#a0a0a0` (secondary text)
-- **Border**: `#222` (card borders)
-- **Font**: System sans-serif (Inconsolata-inspired monospace)
-- **Dark theme only** (no light mode toggle)
+- **Muted**: `#686868` (secondary text)
+- **Border**: `#e0e0e0` (light gray borders)
+- **Card BG**: `#f7f7f7` (light gray card backgrounds)
+- **Footer BG**: `#131313` (dark footer with white text)
+- **Body font**: `Inter` (system sans-serif, weight 400)
+- **Heading font**: `Playfair Display` (serif, weight 700) — used for all h1-h6
+- **Display font**: `Abril Fatface` (serif, weight 400) — used for decorative/section titles
+- **Monospace font**: `Inconsolata` (monospace) — used for taglines like `{think, make, write}`
+- **Font classes**: `font-heading`, `font-display`, `font-mono-text`, `font-body`
+- **Light theme** (matches sandjar.me WordPress site)
+- **Fonts loaded via Next.js `next/font/google`** in `layout.tsx`
+- **CSS variables** defined in `globals.css`: `--background`, `--foreground`, `--accent`, `--muted`, `--border`, `--card-bg`, `--heading`, `--footer-bg`, `--footer-text`
+- **Tailwind theme tokens**: `bg-background`, `text-foreground`, `text-accent`, `text-muted`, `border-border`, `bg-card`, `text-heading`, `bg-footer-bg`, `text-footer-text`
 
 ## Content Management
 Content is stored in TypeScript data files in `src/data/`:

@@ -12,32 +12,48 @@ export default function PublicationsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 font-heading">Publications</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 font-heading text-heading">Publications</h1>
           <p className="text-muted max-w-xl mb-12">
-            Academic papers, articles, and publications on design research, futures thinking, and digital media.
+            Academic papers, articles, and publications on design research and futures thinking.
           </p>
         </motion.div>
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {publications.map((pub, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="p-6 rounded-lg border border-border hover:border-accent/30 transition-all duration-300"
+              className="pb-8 border-b border-border last:border-b-0"
             >
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1">
-                  <h3 className="text-lg font-medium mb-2 font-heading">{pub.title}</h3>
-                  <p className="text-sm text-muted mb-1">{pub.authors}</p>
-                  <p className="text-sm text-[#666]">{pub.venue}</p>
-                </div>
-                <span className="text-sm text-accent whitespace-nowrap">{pub.year}</span>
-              </div>
+              {pub.link ? (
+                <a
+                  href={pub.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <h2 className="text-lg font-medium text-heading group-hover:text-accent transition-colors font-heading">
+                    {pub.title}
+                  </h2>
+                </a>
+              ) : (
+                <h2 className="text-lg font-medium text-heading font-heading">
+                  {pub.title}
+                </h2>
+              )}
+              <p className="text-sm text-muted mt-2">{pub.authors}</p>
+              <p className="text-sm text-muted mt-1">
+                {pub.venue} · {pub.year}
+              </p>
             </motion.div>
           ))}
         </div>
+
+        {publications.length === 0 && (
+          <p className="text-center text-muted py-20">No publications yet.</p>
+        )}
       </div>
     </div>
   );
