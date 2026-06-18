@@ -45,7 +45,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 bg-white border border-border rounded-lg text-foreground placeholder:text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
+                  className="w-full px-4 py-3 bg-white border border-border rounded-none text-foreground placeholder:text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
                   placeholder="Your name"
                 />
               </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 bg-white border border-border rounded-lg text-foreground placeholder:text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
+                  className="w-full px-4 py-3 bg-white border border-border rounded-none text-foreground placeholder:text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
                   placeholder="your@email.com"
                 />
               </div>
@@ -71,13 +71,13 @@ export default function ContactPage() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full px-4 py-3 bg-white border border-border rounded-lg text-foreground placeholder:text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all resize-none"
+                  className="w-full px-4 py-3 bg-white border border-border rounded-none text-foreground placeholder:text-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all resize-none"
                   placeholder="Your message..."
                 />
               </div>
               <button
                 type="submit"
-                className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors text-sm font-medium"
+                className="px-6 py-3 bg-accent text-white rounded-none hover:bg-accent/90 transition-colors text-sm font-medium"
               >
                 Send Message
               </button>
@@ -91,8 +91,8 @@ export default function ContactPage() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col gap-6"
           >
-            <div className="p-6 rounded-lg border border-border bg-white shadow-sm">
-              <h2 className="text-lg font-medium text-heading mb-4 font-heading">Find me online</h2>
+            <div className="p-6 rounded-none border border-border bg-white shadow-sm">
+              <h2 className="text-lg font-bold text-heading mb-4">Find me online</h2>
               <div className="flex flex-col gap-3">
                 {socialLinks.map((link) => (
                   <Link
@@ -108,8 +108,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-white shadow-sm">
-              <h2 className="text-lg font-medium text-heading mb-2 font-heading">Location</h2>
+            <div className="p-6 rounded-none border border-border bg-white shadow-sm">
+              <h2 className="text-lg font-bold text-heading mb-2">Location</h2>
               <p className="text-sm text-muted">
                 Atlanta, GA
               </p>

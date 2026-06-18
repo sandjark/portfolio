@@ -36,7 +36,7 @@ export default function ProjectsPage() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 text-sm rounded-full border transition-all duration-300 ${
+              className={`px-4 py-2 text-sm rounded-none border transition-all duration-300 ${
                 activeCategory === category
                   ? "bg-accent border-accent text-white"
                   : "border-border text-muted hover:border-accent/50 hover:text-heading"
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
               layout
             >
               <Link href={`/projects/${project.slug}`} className="group block">
-                <div className="aspect-[16/10] bg-white rounded-lg overflow-hidden mb-4 border border-border group-hover:border-accent/50 transition-all duration-300 shadow-sm relative">
+                <div className="aspect-[16/10] bg-white rounded-none overflow-hidden mb-4 border border-border group-hover:border-accent/50 transition-all duration-300 shadow-sm relative">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h2 className="text-xl font-medium text-heading group-hover:text-accent transition-colors font-heading">
+                    <h2 className="text-xl font-bold text-heading group-hover:text-accent transition-colors">
                       {project.title}
                     </h2>
                     <p className="text-sm text-muted mt-1">{project.category}</p>

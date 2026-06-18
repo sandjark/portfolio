@@ -32,6 +32,10 @@ const inconsolata = Inconsolata({
 export const metadata: Metadata = {
   title: "Sandjar Kozubaev – Design, Futures, Digital Media",
   description: "Portfolio of Sandjar Kozubaev — exploring design, futures thinking, and digital media.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     title: "Sandjar Kozubaev – Design, Futures, Digital Media",
     description: "Portfolio of Sandjar Kozubaev — exploring design, futures thinking, and digital media.",

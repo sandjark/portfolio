@@ -97,9 +97,18 @@ Content is stored in TypeScript data files in `src/data/`:
 - **Custom domain**: sandjar.me (not yet configured — still pointing to WordPress)
 - Auto-deploys from GitHub `main` branch
 
+## Workflow Rules
+- **Iterate locally first** — always test changes on localhost before deploying
+- **Start dev server**: Use `./skills/start-dev.sh` to launch the dev server in a separate Terminal window (keeps your current session free)
+- **Do NOT auto-deploy** — only push to GitHub/Vercel when explicitly asked by the user
+- Use `./skills/deploy.sh` to deploy when instructed
+
 ## To-Do
-- [ ] Replace placeholder project images with real images in `public/images/`
 - [ ] Set up Formspree for contact form (replace `your-form-id` in `contact/page.tsx`)
-- [ ] Add real project content from WordPress export
 - [ ] Configure custom domain sandjar.me on Vercel
 - [ ] Update DNS at domain registrar to point to Vercel
+
+## Completed
+- [x] Migrated publications page from WordPress — all 3 sections (Peer-Reviewed, Professional & Popular, Talks/Presentations/Workshops) with real citations
+- [x] Downloaded 6 PDF files from WordPress to `public/pdfs/` for local hosting
+- [x] Added PDF download links, DOI links, and external links to publications

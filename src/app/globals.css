@@ -36,12 +36,18 @@ body {
   line-height: 1.7;
 }
 
-/* Headings use Playfair Display */
-h1, h2, h3, h4, h5, h6 {
+/* Page titles use Playfair Display */
+h1 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--heading);
   letter-spacing: -0.02em;
+}
+
+/* Sub-headings inherit body font (Inter) by default */
+h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--heading);
 }
 
 /* Display headings (like section titles) use Abril Fatface */
@@ -64,4 +70,31 @@ html {
 ::selection {
   background: var(--accent);
   color: white;
+}
+
+/* Animated underline for nav links */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link-active::after {
+  transform: scaleX(1);
 }

@@ -34,7 +34,7 @@ export default function Home() {
       <section className="bg-[#f7f7f7] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-semibold font-heading text-heading">Featured Projects</h2>
+            <h2 className="text-2xl font-bold text-heading">Featured Projects</h2>
             <Link
               href="/projects"
               className="text-sm text-accent hover:text-heading transition-colors"
@@ -52,7 +52,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={`/projects/${project.slug}`} className="group block">
-                  <div className="aspect-[16/10] bg-white rounded-lg overflow-hidden mb-4 border border-border group-hover:border-accent/50 transition-all duration-300 shadow-sm relative">
+                  <div className="aspect-[16/10] bg-white rounded-none overflow-hidden mb-4 border border-border group-hover:border-accent/50 transition-all duration-300 shadow-sm relative">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -63,7 +63,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="text-lg font-medium text-heading group-hover:text-accent transition-colors font-heading">
+                      <h3 className="text-lg font-bold text-heading group-hover:text-accent transition-colors">
                         {project.title}
                       </h3>
                       <p className="text-sm text-muted mt-1">{project.category}</p>
@@ -84,9 +84,9 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link
             href="/publications"
-            className="group p-6 rounded-lg border border-border hover:border-accent/50 transition-all duration-300 bg-white shadow-sm"
+            className="group p-6 rounded-none border border-border hover:border-accent/50 transition-all duration-300 bg-white shadow-sm"
           >
-            <h3 className="text-lg font-medium mb-2 text-heading group-hover:text-accent transition-colors font-heading">
+            <h3 className="text-lg font-bold mb-2 text-heading group-hover:text-accent transition-colors">
               Publications
             </h3>
             <p className="text-sm text-muted">
@@ -95,9 +95,9 @@ export default function Home() {
           </Link>
           <Link
             href="/bio"
-            className="group p-6 rounded-lg border border-border hover:border-accent/50 transition-all duration-300 bg-white shadow-sm"
+            className="group p-6 rounded-none border border-border hover:border-accent/50 transition-all duration-300 bg-white shadow-sm"
           >
-            <h3 className="text-lg font-medium mb-2 text-heading group-hover:text-accent transition-colors font-heading">
+            <h3 className="text-lg font-bold mb-2 text-heading group-hover:text-accent transition-colors">
               Bio
             </h3>
             <p className="text-sm text-muted">
@@ -106,9 +106,9 @@ export default function Home() {
           </Link>
           <Link
             href="/contact"
-            className="group p-6 rounded-lg border border-border hover:border-accent/50 transition-all duration-300 bg-white shadow-sm"
+            className="group p-6 rounded-none border border-border hover:border-accent/50 transition-all duration-300 bg-white shadow-sm"
           >
-            <h3 className="text-lg font-medium mb-2 text-heading group-hover:text-accent transition-colors font-heading">
+            <h3 className="text-lg font-bold mb-2 text-heading group-hover:text-accent transition-colors">
               Contact
             </h3>
             <p className="text-sm text-muted">
