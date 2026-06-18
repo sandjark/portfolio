@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
@@ -57,12 +58,14 @@ export default function ProjectsPage() {
               layout
             >
               <Link href={`/projects/${project.slug}`} className="group block">
-                <div className="aspect-[16/10] bg-white rounded-lg overflow-hidden mb-4 border border-border group-hover:border-accent/50 transition-all duration-300 shadow-sm">
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#e8edf5] to-[#d6dce8] group-hover:scale-105 transition-transform duration-500">
-                    <span className="text-6xl opacity-10 text-heading group-hover:opacity-30 transition-opacity font-bold">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
+                <div className="aspect-[16/10] bg-white rounded-lg overflow-hidden mb-4 border border-border group-hover:border-accent/50 transition-all duration-300 shadow-sm relative">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
                 <div className="flex items-start justify-between gap-4">
                   <div>
