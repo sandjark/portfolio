@@ -11,70 +11,39 @@ export default function BioPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Bio</h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="md:col-span-1">
-              <div className="aspect-square bg-card rounded-lg overflow-hidden border border-border">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1a1a2e] to-[#16213e]">
-                  <span className="text-6xl opacity-20 font-bold">SK</span>
-                </div>
-              </div>
-            </div>
-            <div className="md:col-span-2">
-              <div className="space-y-4 text-muted leading-relaxed">
-                <p>
-                  Sandjar Kozubaev is a designer, researcher, and educator working at the
-                  intersection of design, futures thinking, and digital media. Their work
-                  explores how design methodologies can be applied to address complex
-                  societal challenges and create more equitable futures.
-                </p>
-                <p>
-                  With a background in design research and human-computer interaction,
-                  Sandjar has led projects ranging from public IoT infrastructure for
-                  urban environments to participatory design initiatives in public housing
-                  communities.
-                </p>
-                <p>
-                  Their research has been published in leading academic venues including
-                  the ACM Conference on Human Factors in Computing Systems (CHI), Design
-                  Studies Journal, and Futures Journal. Sandjar is also the creator of
-                  Futures Out Loud, a podcast and research project that brings futures
-                  thinking to broader audiences.
-                </p>
-                <p>
-                  Currently, Sandjar is focused on exploring the role of design in shaping
-                  technological futures, with a particular emphasis on civic engagement,
-                  public participation, and community-centered design processes.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Research Interests */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6 font-heading">Research Interests</h2>
-            <div className="flex flex-wrap gap-3">
-              {[
-                "Design Research",
-                "Futures Thinking",
-                "Digital Media",
-                "Human-Computer Interaction",
-                "Participatory Design",
-                "Civic Engagement",
-                "Public IoT",
-                "Design Innovation",
-              ].map((interest) => (
-                <span
-                  key={interest}
-                  className="px-4 py-2 text-sm rounded-full border border-border text-muted"
-                >
-                  {interest}
-                </span>
-              ))}
-            </div>
-          </div>
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 font-heading text-heading">Bio</h1>
         </motion.div>
+
+        <div className="space-y-6 text-muted leading-relaxed">
+          <p>
+            Sandjar Kozubaev is a designer, researcher, and educator exploring the intersection of
+            design research, futures thinking, and digital media. His work focuses on how design
+            can shape more equitable and sustainable futures through participatory methods and
+            speculative approaches.
+          </p>
+
+          <p>
+            He is currently a PhD candidate in Digital Media at Georgia Tech, where his research
+            examines the role of design in public sector innovation, civic engagement, and the
+            governance of emerging technologies. His work has been published in leading design
+            research journals and conferences.
+          </p>
+
+          <p>
+            Previously, Sandjar has worked as a design researcher and strategist, collaborating
+            with government agencies, non-profits, and technology companies to develop human-centered
+            approaches to complex societal challenges. He holds a Master's degree in Design
+            Research from the University of the Arts London and a Bachelor's degree in
+            Architecture from the University of Westminster.
+          </p>
+
+          <p>
+            His research interests include participatory design, design for policy, speculative
+            design, futures studies, and the ethics of emerging technologies. He is particularly
+            interested in how design methods can be used to engage diverse stakeholders in
+            imagining and creating alternative futures.
+          </p>
+        </div>
       </div>
     </div>
   );

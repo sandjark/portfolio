@@ -1,73 +1,90 @@
-"use client";
-
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 
-export default function ProjectDetailPage() {
-  const params = useParams();
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
-    return (
-      <div className="min-h-screen pt-24 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4 font-heading">Project Not Found</h1>
-          <Link href="/projects" className="text-accent hover:text-white transition-colors">
-            ← Back to Projects
-          </Link>
-        </div>
-      </div>
-    );
+    notFound();
   }
 
   return (
     <div className="min-h-screen pt-24 pb-24">
       <div className="max-w-4xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        {/* Back Link */}
+        <Link
+          href="/projects"
+          className="inline-flex items-center text-sm text-accent hover:text-heading transition-colors mb-8"
         >
-          <Link
-            href="/projects"
-            className="text-sm text-accent hover:text-white transition-colors mb-8 inline-block"
+          <svg
+            className="w-4 h-4 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
           >
-            ← Back to Projects
-          </Link>
+            <path d="M19 12H5m7-7l-7 7 7 7" />
+          </svg>
+          Back to Projects
+        </Link>
 
-          <div className="aspect-[16/9] bg-card rounded-lg overflow-hidden mb-8 border border-border">
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1a1a2e] to-[#16213e]">
-              <span className="text-8xl opacity-10 font-bold">
-                {project.title.charAt(0)}
-              </span>
-            </div>
+        {/* Project Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-sm text-accent font-medium">{project.category}</span>
+            <span className="text-sm text-muted">·</span>
+            <span className="text-sm text-muted">{project.year}</span>
           </div>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 font-heading text-heading">
+            {project.title}
+          </h1>
+        </div>
 
-          <div className="flex items-start justify-between gap-4 mb-6">
-            <div>
-              <h1 className="text-3xl md:text-5xl font-bold mb-2 font-heading">{project.title}</h1>
-              <p className="text-muted">{project.category}</p>
-            </div>
-            <span className="text-lg text-accent whitespace-nowrap">{project.year}</span>
+        {/* Project Image Placeholder */}
+        <div className="aspect-[16/9] bg-white rounded-xl mb-12 border border-border shadow-sm overflow-hidden">
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#e8edf5] to-[#d6dce8]">
+            <span className="text-8xl opacity-10 text-heading font-bold">
+              {project.title.charAt(0)}
+            </span>
           </div>
+        </div>
 
-          <p className="text-lg text-muted leading-relaxed mb-8">
+        {/* Project Description */}
+        <div className="prose prose-gray max-w-none">
+          <p className="text-lg leading-relaxed text-muted">
             {project.fullDescription}
           </p>
+        </div>
 
-          {project.link && (
+        {/* External Link */}
+        {project.link && (
+          <div className="mt-12 pt-8 border-t border-border">
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-lg hover:bg-[#3a5fc7] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors text-sm font-medium"
             >
-              View Project →
+              View Project
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
-          )}
-        </motion.div>
+          </div>
+        )}
       </div>
     </div>
   );
