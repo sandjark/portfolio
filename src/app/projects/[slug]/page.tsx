@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
@@ -47,13 +48,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </h1>
         </div>
 
-        {/* Project Image Placeholder */}
-        <div className="aspect-[16/9] bg-white rounded-xl mb-12 border border-border shadow-sm overflow-hidden">
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#e8edf5] to-[#d6dce8]">
-            <span className="text-8xl opacity-10 text-heading font-bold">
-              {project.title.charAt(0)}
-            </span>
-          </div>
+        {/* Project Image */}
+        <div className="aspect-[16/9] bg-white rounded-xl mb-12 border border-border shadow-sm overflow-hidden relative">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 896px"
+          />
         </div>
 
         {/* Project Description */}
