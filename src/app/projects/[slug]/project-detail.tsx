@@ -2,20 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { useState } from "react";
-import { projects } from "@/data/projects";
-import { use } from "react";
+import type { Project } from "@/lib/types";
 
-export function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
-  const project = projects.find((p) => p.slug === slug);
-
+export function ProjectDetail({ project }: { project: Project }) {
   const [selectedImage, setSelectedImage] = useState(0);
-
-  if (!project) {
-    notFound();
-  }
 
   return (
     <div className="min-h-screen pt-24 pb-24">
