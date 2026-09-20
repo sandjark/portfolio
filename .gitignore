@@ -40,6 +40,13 @@ yarn-error.log*
 # obsidian
 .obsidian/
 
+# local-only workflow documentation (never ships with the site)
+# These live in the working copy for agent/tool discoverability but are not
+# part of the deployed project. See ../skills/ for the workspace-level scripts.
+AGENTS.md
+CLAUDE.md
+README.md
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
