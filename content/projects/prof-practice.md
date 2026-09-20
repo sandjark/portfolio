@@ -9,7 +9,6 @@ gallery:
   - "/images/prof-practice.jpg"
 client: "N/A"
 publications: ""
-link: "https://sandjar.me/index.php/project/prof-practice/"
 featured: true
 ---
 

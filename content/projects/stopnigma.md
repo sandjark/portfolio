@@ -11,7 +11,6 @@ gallery:
   - "/images/stopnigma-3.jpg"
 client: "N/A"
 publications: "Kozubaev, S. (2016, October). Stop Nigmas: Experimental Speculative Design through Pragmatic Aesthetics and Public Art. In Proceedings of the 9th Nordic Conference on Human-Computer Interaction (p. 76). ACM."
-link: "https://sandjar.me/index.php/project/stopnigma/"
 featured: true
 ---
 

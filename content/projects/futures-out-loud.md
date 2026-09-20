@@ -10,7 +10,6 @@ gallery:
   - "/images/futures-out-loud-2.jpg"
 client: "N/A"
 publications: ""
-link: "https://sandjar.me/index.php/project/futures-out-loud/"
 featured: true
 ---
 

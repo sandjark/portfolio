@@ -10,7 +10,6 @@ gallery:
   - "/images/public-iot-2.jpg"
 client: "City of New York"
 publications: ""
-link: "https://sandjar.me/index.php/project/public-iot-for-new-york-city/"
 featured: true
 ---
 
