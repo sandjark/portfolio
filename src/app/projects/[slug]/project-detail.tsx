@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Linkify from "@/components/Linkify";
 import type { Project } from "@/lib/types";
 
 export function ProjectDetail({ project }: { project: Project }) {
@@ -91,7 +92,7 @@ export function ProjectDetail({ project }: { project: Project }) {
                   Project Details
                 </h2>
                 <p className="text-base leading-relaxed text-muted">
-                  {project.fullDescription}
+                  <Linkify text={project.fullDescription} />
                 </p>
               </div>
 
@@ -113,7 +114,7 @@ export function ProjectDetail({ project }: { project: Project }) {
                     RELATED PUBLICATIONS
                   </h3>
                   <p className="text-sm text-muted leading-relaxed">
-                    {project.publications}
+                    <Linkify text={project.publications} />
                   </p>
                 </div>
               )}
