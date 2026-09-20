@@ -10,7 +10,7 @@ gallery:
   - "/images/speculative-sensors-02.jpg"
   - "/images/speculative-sensors-03.jpg"
   - "/images/speculative-sensors-04.jpg"
-year: "2019"
+year: "2018"
 client: "N/A"
 publications: ""
 ---

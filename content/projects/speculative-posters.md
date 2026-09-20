@@ -9,7 +9,7 @@ gallery:
   - "/images/speculative-posters-01.jpg"
   - "/images/speculative-posters-02.jpg"
   - "/images/speculative-posters-03.jpg"
-year: "2019"
+year: "2018"
 client: "N/A"
 publications: ""
 ---
