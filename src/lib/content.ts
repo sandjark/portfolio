@@ -3,6 +3,22 @@ import path from "path";
 import matter from "gray-matter";
 import type { Project, Publication, PublicationSection } from "./types";
 
+/**
+ * Frontmatter booleans can arrive as `true`, `"true"`, `yes`, `1`, etc.
+ * depending on how the file was written (e.g. by hand, or by Obsidian's
+ * property editor). Treat all of those as true so a checkbox toggle in
+ * Obsidian can never silently fail.
+ */
+function isTruthy(value: unknown): boolean {
+  if (value === true) return true;
+  if (typeof value === "number") return value === 1;
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    return normalized === "true" || normalized === "yes" || normalized === "1" || normalized === "on";
+  }
+  return false;
+}
+
 const projectsDirectory = path.join(process.cwd(), "content/projects");
 const publicationsDirectory = path.join(process.cwd(), "content/publications");
 
@@ -28,7 +44,7 @@ export function getAllProjects(): Project[] {
         client: data.client || "",
         publications: data.publications || "",
         link: data.link,
-        featured: data.featured === true,
+        featured: isTruthy(data.featured),
       } as Project;
     });
 
