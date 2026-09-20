@@ -125,6 +125,32 @@ export function ProjectDetail({ project }: { project: Project }) {
                 </h3>
                 <p className="text-sm text-heading">{project.category}</p>
               </div>
+
+              {/* Year */}
+              {project.year && (
+                <div>
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-muted mb-2">
+                    YEAR
+                  </h3>
+                  <p className="text-sm text-heading">{project.year}</p>
+                </div>
+              )}
+
+              {/* Download / external resource */}
+              {project.link && (
+                <div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-none px-6 py-3 bg-accent text-white hover:bg-accent/90 transition-colors text-sm font-medium"
+                  >
+                    {/\.(zip|pdf)(\?.*)?$/i.test(project.link)
+                      ? "Download files →"
+                      : "Visit project →"}
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ export interface Project {
   client: string;
   publications: string;
   link?: string;
+  featured?: boolean;
 }
 
 export interface Publication {

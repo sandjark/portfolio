@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import type { Project } from "@/lib/types";
 
 export default function HomeClient({ projects }: { projects: Project[] }) {
-  const featuredProjects = projects.slice(0, 4);
+  const featured = projects.filter((project) => project.featured);
+  const featuredProjects = featured.length > 0 ? featured : projects.slice(0, 4);
 
   return (
     <div className="min-h-screen">

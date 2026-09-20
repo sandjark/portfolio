@@ -28,6 +28,7 @@ export function getAllProjects(): Project[] {
         client: data.client || "",
         publications: data.publications || "",
         link: data.link,
+        featured: data.featured === true,
       } as Project;
     });
 

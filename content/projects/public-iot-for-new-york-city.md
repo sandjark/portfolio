@@ -11,6 +11,7 @@ gallery:
 client: "City of New York"
 publications: ""
 link: "https://sandjar.me/index.php/project/public-iot-for-new-york-city/"
+featured: true
 ---
 
 This is participatory design project exploring the design of public signage for IoT infrastructure in the City of New York. Activities included participatory design workshop with community members do develop transparency design principles and guidelines.

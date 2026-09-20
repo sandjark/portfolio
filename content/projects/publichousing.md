@@ -14,6 +14,7 @@ gallery:
 client: "Atlanta Housing"
 publications: "Sandjar Kozubaev, Fernando Rochaix, Carl DiSalvo, and Christopher A. Le Dantec. 2019. Spaces and Traces: Implications of Smart Technology in Public Housing. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI '19). ACM, New York, NY, USA, Paper 439, 13 pages."
 link: "https://sandjar.me/index.php/project/publichousing/"
+featured: true
 ---
 
 This project explored design and policy implications of using smart devices in public housing. The project was directed by Dr. Carl DiSalvo and Dr. Chris Le Dantec. Through a series of participatory design workshops, researchers and public housing residents collaborated on understanding the possibilities, constraints and challenges of using smart devices (sensors, smart speakers, cameras etc.) in this unique context. Role: design researcher, designer
