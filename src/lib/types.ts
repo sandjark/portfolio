@@ -12,6 +12,8 @@ export interface Project {
   publications: string;
   link?: string;
   featured?: boolean;
+  /** Optional explicit grid position; lower sorts earlier. */
+  order?: number;
 }
 
 export interface Publication {

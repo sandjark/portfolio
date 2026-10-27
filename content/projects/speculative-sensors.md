@@ -2,7 +2,7 @@
 slug: "speculative-sensors"
 title: "Speculative Smart Sensors"
 subtitle: "Participatory methods for speculating about smart sensors"
-category: "Digital Media"
+category: "Research"
 description: "Exploring participatory design methods for speculation about smart sensors and IoT."
 image: "/images/speculative-sensors-01.jpg"
 gallery:

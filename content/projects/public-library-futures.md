@@ -2,7 +2,7 @@
 slug: "public-library-futures"
 title: "Public Library and Civic Futures"
 subtitle: "Design fictional artifact exploring the future of libraries"
-category: "Futures"
+category: "Speculative Design"
 description: "Design fiction artifact: an IMLS call for grants from the year 2035."
 image: "/images/public-library-futures-01.jpg"
 gallery:

@@ -2,7 +2,7 @@
 slug: "prof-practice"
 title: "UX Practice"
 subtitle: "Experience, projects, and outcomes"
-category: "Design"
+category: "Practice"
 description: "Professional practice in design research and futures thinking."
 image: "/images/prof-practice.jpg"
 gallery:

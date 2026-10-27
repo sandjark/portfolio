@@ -2,7 +2,7 @@
 slug: "f1h"
 title: "Futures In 1 Hour Toolkit"
 subtitle: "Participatory futures literacy toolkit."
-category: "Futures"
+category: "Tools & Games"
 description: "A participatory toolkit for teaching futures literacy, free to download under Creative Commons."
 image: "/images/f1h-01.jpg"
 gallery:

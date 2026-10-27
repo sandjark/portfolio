@@ -2,7 +2,7 @@
 slug: "participatory-speculative-design"
 title: "Participatory Speculative Design"
 subtitle: "Participatory design fiction for librarians to imagine alternative futures."
-category: "Futures"
+category: "Research"
 description: "Engaging 200+ library professionals in imagining futures for the Fulton County Library System."
 image: "/images/participatory-speculative-design-01.jpg"
 gallery:

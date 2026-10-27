@@ -19,6 +19,20 @@ function isTruthy(value: unknown): boolean {
   return false;
 }
 
+/**
+ * Frontmatter numbers can arrive as `1` or `"1"` depending on how the file was
+ * written. `undefined` means "no explicit value", which lets the sort fall back
+ * to year and then title.
+ */
+function toNumber(value: unknown): number | undefined {
+  if (typeof value === "number") return Number.isFinite(value) ? value : undefined;
+  if (typeof value === "string" && value.trim() !== "") {
+    const parsed = Number(value.trim());
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return undefined;
+}
+
 const projectsDirectory = path.join(process.cwd(), "content/projects");
 const publicationsDirectory = path.join(process.cwd(), "content/publications");
 
@@ -40,15 +54,30 @@ export function getAllProjects(): Project[] {
         fullDescription: content.trim(),
         image: data.image,
         gallery: data.gallery || [],
-        year: data.year || "",
-        client: data.client || "",
-        publications: data.publications || "",
+        year: data.year != null ? String(data.year) : "",
+        client: data.client != null ? String(data.client) : "",
+        publications: data.publications != null ? String(data.publications) : "",
         link: data.link,
         featured: isTruthy(data.featured),
+        order: toNumber(data.order),
       } as Project;
     });
 
-  return allProjects;
+  // Explicit `order` wins; otherwise newest first, then alphabetical. This
+  // replaces the old fallback to filesystem (filename) order.
+  return allProjects.sort((a, b) => {
+    const orderA = a.order ?? Number.POSITIVE_INFINITY;
+    const orderB = b.order ?? Number.POSITIVE_INFINITY;
+    if (orderA !== orderB) return orderA - orderB;
+
+    const yearA = Number.parseInt(a.year, 10);
+    const yearB = Number.parseInt(b.year, 10);
+    const safeYearA = Number.isFinite(yearA) ? yearA : 0;
+    const safeYearB = Number.isFinite(yearB) ? yearB : 0;
+    if (safeYearA !== safeYearB) return safeYearB - safeYearA;
+
+    return a.title.localeCompare(b.title);
+  });
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {

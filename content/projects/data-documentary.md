@@ -2,7 +2,7 @@
 slug: "data-documentary"
 title: "Data Documentary"
 subtitle: "The story of gentrification told through public data."
-category: "Design & Research"
+category: "Research"
 description: "A data documentary about real estate politics and economics in Atlanta."
 image: "/images/data-documentary-01.png"
 gallery:

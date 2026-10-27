@@ -2,7 +2,7 @@
 slug: "stopnigma"
 title: "Stop Nigma"
 subtitle: "Participatory speculation through public art."
-category: "Digital Media"
+category: "Speculative Design"
 description: "An interactive digital media project exploring new forms of engagement."
 image: "/images/stopnigma.jpg"
 gallery:

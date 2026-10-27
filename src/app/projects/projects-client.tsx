@@ -7,7 +7,18 @@ import { useState } from "react";
 import type { Project } from "@/lib/types";
 
 export default function ProjectsClient({ projects }: { projects: Project[] }) {
-  const categories = ["All", ...new Set(projects.map((p) => p.category))];
+  // Most-used categories first, then alphabetical, with "All" pinned on the left.
+  const categories = [
+    "All",
+    ...Array.from(
+      projects.reduce((counts, project) => {
+        counts.set(project.category, (counts.get(project.category) ?? 0) + 1);
+        return counts;
+      }, new Map<string, number>())
+    )
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .map(([category]) => category),
+  ];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =

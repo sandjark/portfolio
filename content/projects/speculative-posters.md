@@ -2,7 +2,7 @@
 slug: "speculative-posters"
 title: "Speculative Poster Design"
 subtitle: "Teaching futures through visual design"
-category: "Design & Futures"
+category: "Speculative Design"
 description: "An undergraduate visual design assignment to poster public issues from imaginary futures."
 image: "/images/speculative-posters-01.jpg"
 gallery:

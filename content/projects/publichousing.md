@@ -2,7 +2,7 @@
 slug: "publichousing"
 title: "Smart Technology in Public Housing"
 subtitle: "Participatory design research for housing policy"
-category: "Design & Research"
+category: "Research"
 description: "Research and design for public housing communities."
 image: "/images/public-housing.jpg"
 gallery:

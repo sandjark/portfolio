@@ -2,7 +2,7 @@
 slug: "futures-out-loud"
 title: "Futures Out Loud"
 subtitle: "Participatory Design Game"
-category: "Futures"
+category: "Tools & Games"
 description: "A podcast and research project exploring futures thinking."
 image: "/images/futures-out-loud.jpg"
 gallery:

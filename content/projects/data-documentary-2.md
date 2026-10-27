@@ -2,7 +2,7 @@
 slug: "data-documentary-2"
 title: "Surveillance Image Generator"
 subtitle: "Participatory speculation through computational media"
-category: "Futures"
+category: "Tools & Games"
 description: "Computational media experiments probing privacy and surveillance in public space."
 image: "/images/data-documentary-2-01.png"
 gallery:

@@ -2,7 +2,7 @@
 slug: "public-iot-for-new-york-city"
 title: "Public IoT for New York City"
 subtitle: "Experimental media and more-than-human worlds"
-category: "Design & Futures"
+category: "Speculative Design"
 description: "Exploring the future of public IoT infrastructure in urban environments."
 image: "/images/public-iot.jpg"
 gallery:

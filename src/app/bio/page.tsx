@@ -43,15 +43,15 @@ export default function BioPage() {
             className="md:col-span-2 space-y-6 text-muted leading-relaxed"
           >
             <p>
-              Sandjar Kozubaev is a designer, researcher, and educator exploring the intersection of
+              Sandjar Kozubaev is a design leader, researcher, and educator exploring the intersection of
               design research, futures thinking, and digital media. His work focuses on how design
               can shape more equitable and sustainable futures through participatory methods and
               speculative approaches.
             </p>
 
             <p>
-              He is currently a PhD candidate in Digital Media at Georgia Tech, where his research
-              examines the role of design in public sector innovation, civic engagement, and the
+              He has a PhD in Digital Media at Georgia Tech. His research
+              examined the role of design in public sector innovation, civic engagement, and the
               governance of emerging technologies. His work has been published in leading design
               research journals and conferences.
             </p>
@@ -59,8 +59,8 @@ export default function BioPage() {
             <p>
               Previously, Sandjar has worked as a design researcher and strategist, collaborating
               with government agencies, non-profits, and technology companies to develop human-centered
-              approaches to complex societal challenges. He holds a Master's degree in Design
-              Research from the University of the Arts London and a Bachelor's degree in
+              approaches to complex societal challenges. He holds a Master&rsquo;s degree in Design
+              Research from the University of the Arts London and a Bachelor&rsquo;s degree in
               Architecture from the University of Westminster.
             </p>
 
